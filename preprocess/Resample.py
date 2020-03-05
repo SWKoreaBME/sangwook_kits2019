@@ -10,9 +10,7 @@ def resample(img_array, target_voxel = (1, 1, 1)):
     '''
     target_voxel_size = np.diag(target_voxel)
     img_resampled = image.resample_img(img_array, target_affine=target_voxel_size).get_data()
-#     voxel_size = check_voxel_size(img_resampled)
     img_resampled_img = image.resample_img(img_array, target_affine=target_voxel_size).get_data()
-#     img_resampled_img = np.rot90(img_resampled_img,2)
     
     return img_resampled_img, target_voxel_size
 
